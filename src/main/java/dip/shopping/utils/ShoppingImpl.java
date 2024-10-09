@@ -1,17 +1,20 @@
-package dip.shopping;
+package dip.shopping.utils;
 
-public class Shopping {
+import dip.shopping.interfaces.ShoppingItem;
+
+public class ShoppingImpl implements ShoppingItem {
 
     private String itemName;
     private double price;
     private int quantity;
 
-    public Shopping(String itemName, double price, int quantity) {
+    public ShoppingImpl(String itemName, double price, int quantity) {
         this.itemName = itemName;
         this.price = price;
         this.quantity = quantity;
     }
 
+    @Override
     public String getItemName() {
         return itemName;
     }
@@ -20,6 +23,7 @@ public class Shopping {
         this.itemName = itemName;
     }
 
+    @Override
     public double getPrice() {
         return price;
     }
@@ -28,6 +32,7 @@ public class Shopping {
         this.price = price;
     }
 
+    @Override
     public int getQuantity() {
         return quantity;
     }
