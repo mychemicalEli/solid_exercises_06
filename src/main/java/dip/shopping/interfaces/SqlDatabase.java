@@ -1,7 +1,7 @@
 package dip.shopping.interfaces;
 
-import dip.shopping.utils.ShoppingImpl;
+import dip.shopping.utils.Shopping;
 
 public interface SqlDatabase {
-    void save (ShoppingItem shoppingItem);
+    void save (Shopping shopping);
 }

@@ -1,9 +1,8 @@
 package dip.shopping.basket;
 
-import dip.shopping.interfaces.ShoppingItem;
-import dip.shopping.utils.ShoppingImpl;
 import dip.shopping.interfaces.CreditCard;
 import dip.shopping.interfaces.SqlDatabase;
+import dip.shopping.utils.Shopping;
 
 public class ShoppingBasket {
 
@@ -15,8 +14,8 @@ public class ShoppingBasket {
         this.creditCard = creditCard;
     }
 
-    public void buy(ShoppingItem shoppingItem) {
-        sqlDatabase.save(shoppingItem);
-        creditCard.pay(shoppingItem);
+    public void buy(Shopping shopping) {
+        sqlDatabase.save(shopping);
+        creditCard.pay(shopping);
     }
 }

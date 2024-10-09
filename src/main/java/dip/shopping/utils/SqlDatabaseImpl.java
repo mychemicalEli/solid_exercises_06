@@ -1,11 +1,10 @@
 package dip.shopping.utils;
 
-import dip.shopping.interfaces.ShoppingItem;
 import dip.shopping.interfaces.SqlDatabase;
 
 public class SqlDatabaseImpl implements SqlDatabase {
     @Override
-    public void save(ShoppingItem shoppingItem) {
-        System.out.println("Saving " + shoppingItem.getItemName() + " to the database");
+    public void save(Shopping shopping) {
+        System.out.println("Saving " + shopping.getItemName() + " to the database");
     }
 }
